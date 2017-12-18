@@ -58,10 +58,10 @@ pre: You MUST have an Android computer (TVbox) with Web server (e.g. Palapa), ph
      An Arduino board and Arduino IDE. The IR hardware is not required to run this test.
      (see https://github.com/msillano/USBphpTunnel)
      
-1 -  Copy www/*.* to WEB server directory  (e.g. /mnt/shell/emulated/0/pws/www/ )
-2 -  Using phpmyAdmin you create a DB 'remotesdb' and you import the file sql to create the fifo table.
-3 -  You compile and upload the sketch irTunnel_fifo.ino on the Arduino board
-4 -  Find USBphpTunnel/config.ini:  (e.g. /mnt/shell/emulated/0/USBphpTunnel/config.ini)
+-  Copy www/*.* to WEB server directory  (e.g. /mnt/shell/emulated/0/pws/www/ )
+-  Using phpmyAdmin you create a DB 'remotesdb' and you import the file sql to create the fifo table.
+-  You compile and upload the sketch irTunnel_fifo.ino on the Arduino board
+-  Find USBphpTunnel/config.ini:  (e.g. /mnt/shell/emulated/0/USBphpTunnel/config.ini)
       -  The serial speed in irTunnel_fifo.ino and in USBphpTunnel/config.ini must be equals.
       -  Update the phpPath (e.g. http\://localhost\:8080/upt_fifo) in USBphpTunnel/config.ini 
       
