@@ -53,3 +53,12 @@
    - statusRequest()
    - popGETrequest() or popSETrequest()
       
+  ## see also
+
+     Using USBphpTunnel the master is Arduino, and you don't need serial drivers.
+      
+     Using USBphpTunnel_fifo (https://github.com/msillano/USBphpTunnel_fifo) the Master is PHP, asynchronous.
+     
+     Using ArduinoLinuxSerial (https://github.com/msillano/ArduinoLinuxSerial) the Master is PHP, synchronous, and you need a serial driver.
+      
+      
