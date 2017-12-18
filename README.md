@@ -1,27 +1,26 @@
 # USBphpTunnel_fifo
 
- This is an extension to USBphpTunnel () with the goals:
+ This is an extension to USBphpTunnel (https://github.com/msillano/USBphpTunnel) with the goals:
   - make php master (in USBphpTunnel Arduino is master)
   - have asynchronous communications.
   - allow concurrence
     
- This extension is general pourpose, but the demo uses an Arduino sketch developped for remotesDB
+ This extension is general pourpose, but the demo uses an Arduino sketch developped for remotesDB (https://github.com/msillano/remotesDB)
  
  ![MXQ and Arduino](./img/arduino.jpg)
  
-## HOW IT WORKS
- - step1: The php 'push' a request in the fifo.
+## How it works
+ - step1: The php 'push' a request on the fifo.
  - step2: The Arduino tests in polling the fifo and gets the request.
  - step3: Arduino processes the request and update the fifo with the result.
  - step4: The php can now get the response.
  
-## DEMO
- 
+## Demo 
  The file upt_test_arduino.php is a demo for this library:
  
  ![demo sreenshot](./img/2017-12-18.193137.shot.png)
  
- ## IMPLEMENTATION
+## Implementation
  
  Protocol:
  
@@ -53,9 +52,22 @@
    - statusRequest()
    - popGETrequest() or popSETrequest()
       
-  ## see also
+## Installation:
+pre: You MUST have an Android computer (TVbox) with Web server (e.g. Palapa), php, phpmyAdmin
+     and USBphpTunnel.apk installed and working. 
+     An Arduino board and Arduino IDE. The IR hardware is not required to run this test.
+     (see https://github.com/msillano/USBphpTunnel)
+     
+1 -  Copy www/*.* to WEB server directory  (e.g. /mnt/shell/emulated/0/pws/www/ )
+2 -  Using phpmyAdmin you create a DB 'remotesdb' and you import the file sql to create the fifo table.
+3 -  You compile and upload the sketch irTunnel_fifo.ino on the Arduino board
+4 -  Find USBphpTunnel/config.ini:  (e.g. /mnt/shell/emulated/0/USBphpTunnel/config.ini)
+      -  The serial speed in irTunnel_fifo.ino and in USBphpTunnel/config.ini must be equals.
+      -  Update the phpPath (e.g. http\://localhost\:8080/upt_fifo) in USBphpTunnel/config.ini 
+      
+  ## See also
 
-     Using USBphpTunnel the master is Arduino, and you don't need serial drivers.
+     Using USBphpTunnel (https://github.com/msillano/USBphpTunnel) the master is Arduino, and you don't need serial drivers.
       
      Using USBphpTunnel_fifo (https://github.com/msillano/USBphpTunnel_fifo) the Master is PHP, asynchronous.
      
