@@ -56,7 +56,7 @@
 pre: You MUST have an Android computer (TVbox) with Web server (e.g. Palapa), php, phpmyAdmin
      and USBphpTunnel.apk installed and working. 
      An Arduino board and Arduino IDE. The IR hardware is not required to run this test.
-     (see https://github.com/msillano/USBphpTunnel)
+     (see https://github.com/msillano/irp_classes/blob/master/Arduino/IRHW-Arduino.pdf)
      
 -  Copy www/*.* to WEB server directory  (e.g. /mnt/shell/emulated/0/pws/www/ )
 -  Using phpmyAdmin you create a DB 'remotesdb' and you import the file sql to create the fifo table.
