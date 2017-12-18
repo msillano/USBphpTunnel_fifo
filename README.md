@@ -46,7 +46,7 @@
    - status = statusRequest(id)
    - data = popGETrequest(id) (if status READY, and set it to DONE|BAD) or data = popSETrequest(id) (if status DONE|BAD)
 
-The following pages makes an Automata triggered by Arduino:
+The following pages makes an Automata triggered by Arduino via USBphpTunnel:
   - upt_fifow.php : for arduino polling, returns (if any) the ASCII request (set status PROCESSING)
   - upt_fifoset.php: set DONE|BAD a SET request, update data in error case 
   - upt_fifoget.php: set READY a GET request, update data or error_message
