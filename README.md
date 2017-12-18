@@ -2,7 +2,7 @@
 
  This is an extension to USBphpTunnel (https://github.com/msillano/USBphpTunnel) with the goals:
   - make php master (in USBphpTunnel Arduino is master)
-  - have asynchronous communications.
+  - non blocking communications.
   - allow concurrence
     
  This extension is general pourpose, but the demo uses an Arduino sketch developped for remotesDB (https://github.com/msillano/remotesDB)
@@ -71,10 +71,10 @@ pre: You MUST have an Android computer (TVbox) with Web server (e.g. Palapa), ph
       
   ## See also
 
-     Using USBphpTunnel (https://github.com/msillano/USBphpTunnel) the master is Arduino, and you don't need serial drivers.
+     Using USBphpTunnel (https://github.com/msillano/USBphpTunnel) the master is Arduino, not blocking main, and you don't need serial drivers.
       
-     Using USBphpTunnel_fifo (https://github.com/msillano/USBphpTunnel_fifo) the Master is PHP, asynchronous.
+     Using USBphpTunnel_fifo (https://github.com/msillano/USBphpTunnel_fifo) the Master is PHP, not blocking main.
      
-     Using ArduinoLinuxSerial (https://github.com/msillano/ArduinoLinuxSerial) the Master is PHP, synchronous, and you need a serial driver.
+     Using ArduinoLinuxSerial (https://github.com/msillano/ArduinoLinuxSerial) the Master is PHP, blocking main, and you need a serial driver.
       
       
