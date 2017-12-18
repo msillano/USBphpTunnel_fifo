@@ -7,7 +7,7 @@
     
  This extension is general pourpose, but the demo uses an Arduino sketch developped for remotesDB
  
- ![MXQ and Arduino](./blob/master/img/arduino.jpg)
+ ![MXQ and Arduino](./img/arduino.jpg)
  
  
  
