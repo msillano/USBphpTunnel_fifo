@@ -44,9 +44,9 @@
  
    In this file all primitives for fifo management.
    The following pages makes an Automa triggered by Arduino:
-    - upt_fifow.php : for arduino polling, returns (if any) the ASCII request
-    - upt_fifoset.php: close a SET, update in error case 
-    - upt_fifoset.php: update a GET with data|error_message
+  - upt_fifow.php : for arduino polling, returns (if any) the ASCII request
+  - upt_fifoset.php: close a SET, update in error case 
+  - upt_fifoset.php: update a GET with data|error_message
    
    The main php program uses: 
    - pushGETrequest() or pushSETrequest()
