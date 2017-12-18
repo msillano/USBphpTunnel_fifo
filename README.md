@@ -71,10 +71,10 @@ pre: You MUST have an Android computer (TVbox) with Web server (e.g. Palapa), ph
       
   ## See also
 
-     Using USBphpTunnel (https://github.com/msillano/USBphpTunnel) the master is Arduino, not blocking main, and you don't need serial drivers.
+     Using USBphpTunnel (https://github.com/msillano/USBphpTunnel) the master is Arduino, blocking master, and you don't need serial drivers.
       
-     Using USBphpTunnel_fifo (https://github.com/msillano/USBphpTunnel_fifo) the Master is PHP, not blocking main.
+     Using USBphpTunnel_fifo (https://github.com/msillano/USBphpTunnel_fifo) the Master is PHP, not blocking master.
      
-     Using ArduinoLinuxSerial (https://github.com/msillano/ArduinoLinuxSerial) the Master is PHP, blocking main, and you need a serial driver.
+     Using ArduinoLinuxSerial (https://github.com/msillano/ArduinoLinuxSerial) the Master is PHP, blocking master, and you need a serial driver.
       
       
