@@ -42,19 +42,15 @@
  Library  (upt_fifi.php)
 
  In this file all primitives for fifo management. The main php program uses: 
-   - id = pushGETrequest() or id = pushSETrequest()
+   - id = pushGETrequest() or id = pushSETrequest()  (in WAIT status)
    - status = statusRequest(id)
-   - data = popGETrequest(id) or data = popSETrequest(id)
+   - data = popGETrequest(id) (if status READY, and set it to DONE|BAD) or data = popSETrequest(id) (if status DONE|BAD)
 
-The following pages makes an Automa triggered by Arduino:
-  - upt_fifow.php : for arduino polling, returns (if any) the ASCII request
-  - upt_fifoset.php: close a SET, update data in error case 
-  - upt_fifoset.php: update a GET with data|error_message
-   
-   
-   - pushGETrequest() or pushSETrequest()
-   - statusRequest()
-   - popGETrequest() or popSETrequest()
+The following pages makes an Automata triggered by Arduino:
+  - upt_fifow.php : for arduino polling, returns (if any) the ASCII request (set status PROCESSING)
+  - upt_fifoset.php: set DONE|BAD a SET request, update data in error case 
+  - upt_fifoget.php: set READY a GET request, update data or error_message
+ 
       
 ## Installation:
 pre: You MUST have an Android computer (TVbox) with Web server (e.g. Palapa), php, phpmyAdmin
