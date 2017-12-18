@@ -1,6 +1,6 @@
 # USBphpTunnel_fifo
 
- This is an extension to USBphpTunnel with the goals:
+ This is an extension to USBphpTunnel () with the goals:
   - make php master (in USBphpTunnel Arduino is master)
   - have asynchronous communications.
   - allow concurrence
@@ -15,13 +15,13 @@
  - step3: Arduino processes the request and update the fifo with the result.
  - step4: The php can now get the response.
  
- DEMO
+## DEMO
  
  The file upt_test_arduino.php is a demo for this library:
  
  ![demo sreenshot](./img/2017-12-18.193137.shot.png)
  
- # IMPLEMENTATION
+ ## IMPLEMENTATION
  
  Protocol:
  
@@ -49,7 +49,7 @@
     - upt_fifoset.php: update a GET with data|error_message
    
    The main php program uses: 
-      - pushGETrequest()  or   pushSETrequest()
-      - statusRequest()
-      - popGETrequest()
+   - pushGETrequest() or pushSETrequest()
+   - statusRequest()
+   - popGETrequest() or popSETrequest()
       
